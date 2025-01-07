@@ -1,0 +1,16 @@
+### Test GET / WEBSITE
+GET http://localhost:8383
+
+### Test GET DATA endpoint
+GET http://localhost:8383/api/data
+
+### DATA endpoint for adding a user
+POST http://localhost:8383/api/data
+Content-Type: application/json
+
+{
+   "name" : "gilgamesh" 
+}
+
+### DATA endpoint for deleting the last user
+DELETE http://localhost:8383/api/data
