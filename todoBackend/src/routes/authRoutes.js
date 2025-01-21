@@ -16,7 +16,7 @@ router.post('/register', (req,res) => {
     //save the new user and hashed password to the db
     try{
         const insertUser = db.prepare(`INSERT INTO users (username, password) VALUES (?,?)`)
-        const result = insertUser.run(username, hashedPassword)
+        const result = insertUser.run(username, hashedPassword) //This method executes a prepared SQL statement and retrieves all rows from the result set. It is used when you expect multiple rows to be returned.
 
         //now that we have a user, I want to add their first todo for them
         const defaultTodo = `Hello :) Add your first todo!`
@@ -41,7 +41,7 @@ router.post('/login', (req,res) => {
 
     try{
         const getUser = db.prepare('SELECT * FROM users WHERE username = ?')
-        const user = getUser.get(username)
+        const user = getUser.get(username) //retrieves a single row
 
         //if we cannot find a user associated with the username return out of the function
         if (!user) { return res.status(404).send({message: "User not found"})}
