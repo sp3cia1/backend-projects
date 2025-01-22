@@ -1,0 +1,23 @@
+{
+  "name": "dockerized_todo_backend_w_postgresql",
+  "version": "1.0.0",
+  "description": "A dockerized Full stack todo application backend that uses a NodeJS backend, a PostgreSql database, a Prisma ORM, and JWT authentication",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch --env-file=.env --experimental-sqlite ./src/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^6.2.1",
+    "bcryptjs": "^2.4.3",
+    "dockerized_todo_backend_w_postgresql": "file:",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.13.1",
+    "prisma": "^6.2.1"
+  }
+}

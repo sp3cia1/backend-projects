@@ -1,5 +1,5 @@
 {
-  "name": "todoBackend",
+  "name": "todo_backend",
   "version": "1.0.0",
   "description": "Full stack todo application backend that uses a NodeJS backend, a SQLlite database and JWT authentication",
   "main": "index.js",
@@ -15,6 +15,7 @@
     "bcryptjs": "^2.4.3",
     "express": "^4.21.2",
     "jsonwebtoken": "^9.0.2",
+    "todo_backend": "file:",
     "todoBackend": "file:"
   }
 }
